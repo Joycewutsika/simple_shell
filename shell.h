@@ -27,7 +27,7 @@ char *modify_space(char *str);
 char *_strtok(char *str, const char *delim);
 int save_history(char *input);
 void hashtag_handler(char *buff);
-unsigned int is _char_match(char ch, const char str);
+unsigned int is_char_match(char ch, const char str);
 void prompt(void);
 char **separateCommand(char *input);
 
@@ -73,7 +73,7 @@ int handle_builtin_command(char **cmd, int st);
 /***** STRING HANDLER *****/
 
 int _putchar(char c);
-void _puts(cahr *str);
+void _puts(char *str);
 int _isalpha(int c);
 char *_itoa(unsigned int n);
 int _atoi(char *s);
@@ -96,9 +96,9 @@ extern char **environ;
 
 /***** HELP FUNCTIONS *****/
 
-int custom_display_help(char **cmd, _attribute_((unused)) int status);
+int custom_display_help(char **cmd, __attribute__((unused)) int status);
 void custom_help_env(void);
-void custom _help_setenv(void);
+void custom_help_setenv(void);
 void display_shellby_help(void);
 void display_custom_command_1_help(void);
 void display_custom_command_2_help(void);
@@ -109,12 +109,12 @@ void custom_help_unsetenv(void);
 
 /***** BUILTIN FUNCTIONS *****/
 
-int change_dir(char **cmd, _attribute_((unused)) int st);
-int display_env(_attribute((unused)) char **cmd,
-		__attribute_((unused)) int st);
+int change_dir(char **cmd, __attribute__((unused)) int st);
+int display_env(__attribute((unused)) char **cmd,
+		__attribute__((unused)) int st);
 int execute_echo(char **cmd, int st);
-int display_history(_attribute((unused)) char **c,
-		__attribute_((unused)) int st);
+int display_history(__attribute((unused)) char **c,
+		__attribute__((unused)) int st);
 int check_builtin_command(char **cmd);
 int handle_builtin_command(char **cmd, int st);
 void exit_builtin_command(char **cmd, char *input, char **argv,
