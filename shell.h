@@ -27,15 +27,15 @@ char *modify_space(char *str);
 char *_strtok(char *str, const char *delim);
 int save_history(char *input);
 void hashtag_handler(char *buff);
-unsigned int is_char_match(char ch, const char str);
+unsigned int is_char_match(char ch, const char *str);
 void prompt(void);
 char **separateCommand(char *input);
 
 /***** FUNCTIONS FOR ERRORS *****/
 
-void error_file(char **argv, int counter);
-void print_error(char *input, int counter, char **argv);
-void _prerror(char *argv, int counter, char **cmd);
+void error_file(char **argv, int c);
+void print_error(char *input, int c, char **argv);
+void _prerror(char **argv, int c, char **cmd);
 
 /***** MEMORY HANDLERS *****/
 
@@ -83,7 +83,7 @@ void array_rev(char *arr, int len);
 char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
 char *_strcat(char *dest, char *src);
-char *_strchr(char *s, char *c);
+char *_strchr(char *s, char c);
 int _strncmp(const char *s1, const char *s2, size_t n);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
